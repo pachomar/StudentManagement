@@ -1,0 +1,11 @@
+﻿
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("Logout", "Actors", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <span id="btnLogOut" class="glyphicon glyphicon-log-out navbar-brand" style="float:right;cursor:pointer;font-size:30px" title="Log Out"></span>
+    }
+}
+
+
